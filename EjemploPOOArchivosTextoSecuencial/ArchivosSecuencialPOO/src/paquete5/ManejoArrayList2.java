@@ -20,7 +20,7 @@ public class ManejoArrayList2 {
         
         // Arreglo
         Profesor [] profesores = new Profesor[2];
-        profesores[0] = prof1;
+        profesores[0] =  prof1;
         profesores[1] = prof2;
         
         for (int i = 0; i < profesores.length; i++) {

@@ -28,8 +28,9 @@ public class ArchivoLectura {
         if (f.exists()) {
             try {
                 entrada = new Scanner(new File(rutaArchivo));
-                // entrada = new Scanner(System.in);
+                //Lo cual es lo mismo que escribir esto 
                 // entrada = new Scanner(f);
+                
             } // fin de try
             catch (FileNotFoundException e) {
                 System.err.println("Error al leer del archivo: " + e);
@@ -44,7 +45,7 @@ public class ArchivoLectura {
 
     public void establecerRutaArchivo() {
         rutaArchivo = String.format("data/%s.txt",
-                obtenerNombreArchivo());;
+                obtenerNombreArchivo());
     }
 
     public String obtenerNombreArchivo() {
@@ -63,14 +64,14 @@ public class ArchivoLectura {
 
         if (f.exists()) {
 
-            while (entrada.hasNext()) {
-                String linea = entrada.nextLine(); // Tara Hernandez;contratado
+            while (entrada.hasNext()) {  //has next corre mientras exista lineas en el archivo
+                String linea = entrada.nextLine(); // 1 vez, toma la primera linea que es --> Tara Hernandez;contratado
 
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
                 );
-                Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
-                        linea_partes.get(1) // contratado
+                Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez --> saca el nombre
+                        linea_partes.get(1) // contratado --> saca el tipo
                 );
                 lista.add(p);
 

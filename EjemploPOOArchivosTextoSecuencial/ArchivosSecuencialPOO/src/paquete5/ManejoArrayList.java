@@ -18,13 +18,17 @@ public class ManejoArrayList {
         Profesor prof2 = new Profesor("David Jones", "nombramiento");
         
         // Arreglo
-        Profesor [] profesores = new Profesor[2];
+        Profesor [] profesores = new Profesor[2]; //maximo 2 elementos (0,1)
         profesores[0] = prof1;
         profesores[1] = prof2;
         
         for (int i = 0; i < profesores.length; i++) {
             System.out.printf("%s - %s\n", profesores[i].obtenerNombre(),
                     profesores[i].obtenerTipo());
+            //Tambien se puede declarar una variable del mismo tipo y llamar a los metodos
+            //Profesor p = profesores[i];
+            //System.out.printf("%s - %s\n", p.obtenerNombre(),
+            //       p.obtenerTipo());
         }
         
         System.out.println("-----------------------------");
@@ -37,6 +41,11 @@ public class ManejoArrayList {
         for (int i = 0; i < profesores2.size(); i++) {
             System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
                     profesores2.get(i).obtenerTipo());
+            //Tambien se puede declarar una variable del mismo tipo y llamar a los metodos
+            //Profesor p = profesores2.get(i);
+            //System.out.printf("%s - %s\n", p.obtenerNombre(),
+            //       p.obtenerTipo());
+        
         }
         
         System.out.println("-----------------------------");
