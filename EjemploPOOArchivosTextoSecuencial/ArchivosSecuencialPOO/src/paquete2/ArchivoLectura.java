@@ -15,7 +15,7 @@ import paquete1.Profesor;
 
 public class ArchivoLectura {
 
-    private Scanner entrada;
+    private Scanner entrada; //Todos los datos existentes del archivo 
     private String nombreArchivo;
     private String rutaArchivo;
     private ArrayList<Profesor> lista;
@@ -70,8 +70,8 @@ public class ArchivoLectura {
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
                 );
-                Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez --> saca el nombre
-                        linea_partes.get(1) // contratado --> saca el tipo
+                Profesor p = new Profesor(linea_partes.get(0), // linea[0] = Tara Hernandez --> saca el nombre
+                        linea_partes.get(1) // linea[1] = contratado --> saca el tipo
                 );
                 lista.add(p);
 

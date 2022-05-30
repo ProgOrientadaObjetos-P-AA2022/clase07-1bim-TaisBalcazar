@@ -51,7 +51,7 @@ public class EscrituraArchivoSecuencial {
 
     public void establecerSalida() {
         try {
-            salida.writeObject(registro); // envía el registro como salida
+            salida.writeObject(registro); // envía el registro como salida --> writeObject= se guardan los objetos de tipo Calificacion 
         } catch (IOException ex) {
             System.err.println("Error al escribir en el archivo.");
         }

@@ -34,6 +34,6 @@ public class Ejecutor {
         LecturaArchivoSecuencial lectura = 
                 new LecturaArchivoSecuencial(nombreArchivo);
         lectura.establecerProfesores();
-        System.out.println(lectura);
+        System.out.println(lectura); //se llama al toString
     }
 }
