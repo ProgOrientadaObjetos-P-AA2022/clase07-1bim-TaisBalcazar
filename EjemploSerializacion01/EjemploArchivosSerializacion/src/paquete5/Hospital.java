@@ -46,4 +46,12 @@ public class Hospital implements Serializable {
     public double obtenerPresupuesto() {
         return presupuesto;
     }
+    
+        @Override
+    public String toString(){
+        String valor = String.format("%s-%s-%s\n", obtenerNombre(), 
+                obtenerNumeroCamas(),
+                obtenerPresupuesto());
+        return valor;
+    }
 }

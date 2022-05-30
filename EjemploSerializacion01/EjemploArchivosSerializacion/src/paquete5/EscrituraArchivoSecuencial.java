@@ -16,7 +16,8 @@ import java.util.ArrayList;
  * @author SALA I
  */
 public class EscrituraArchivoSecuencial implements Serializable{
-     private String nombreArchivo;
+    
+    private String nombreArchivo;
     private ObjectOutputStream salida; 
     private Hospital registroHospital; //objeto de tipo Hospital
     private ArrayList<Hospital> listaHospital;
